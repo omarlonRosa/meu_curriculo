@@ -9,12 +9,16 @@ function typeWriter() {
     nameElement.textContent = text.slice(0, ++index) + '|';
     if (index === text.length) clearInterval(typingEffect);
   }, 100);
-
-  if(localStorage.getItem('theme') === 'dark') {
-    document.documentElement.classList.add('dark');
-  }
-
+  const theme = localStorage.getItem('theme');
+      if (theme === 'dark') document.body.classList.add('dark');
 }
+
+function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+    }
+
 
 function shareLink() {
 
