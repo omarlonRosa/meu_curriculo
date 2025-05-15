@@ -18,20 +18,17 @@ function typeWriter() {
 
 function shareLink() {
 
-  const link = window.location.href;
+  const link ='https://meu-curriculo-rouge.vercel.app/';
   const phoneNumber = '+559499202-5613';
   const message = `👋 Olá! Sou Marlon Rosa, Engenheiro de Software e Designer Gráfico. 
 Tenho experiência com desenvolvimento em React, NextJS, JavaScript e design gráfico (Photoshop e Illustrator).
 💡 Atualmente estou + trabalhando em projetos com Phoenix e Elixir. 
 📌 Vamos conversar? 
 Você pode me contatar diretamente aqui: ${phoneNumber}.
-Confira meu currículo completo aqui: ${encodeURIComponent(link)}`;
+Confira meu currículo completo aqui: ${link}`;
 
 
-  const encodedMessage = encodeURIComponent(message);
-
-  const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedMessage}`;
-  window.open(whatsappUrl, '_blank');
+window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`, '_blank');
 }
 
 
