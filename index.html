@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+    .blinking-cursor {animation: blik 1s step-end infinite; }
+    @keyframes blink {50% { opacity: 0;}}
+    </style>
+    <script>
+    tailwind.config = {
+      darkMode: 'class', // Habilitar modo escuro com a classe "dark"
+    }
+    </script>
+    <script src="js/script.js"></script>
+
+  </head>
+
+  <body class="bg-white text-gray-800 font-mono p-8 transition-colors duration-300 dark:bg-gray-900 dark:text-green-400" id="body">
+    <div class="max-w-6xl mx-auto bg-white text-gray-800 rounded-lg shadow-xl p-6 dark:bg-gray-800 dark:text-green-400 transition-colors duration-300" id="curriculo">
+      <div class="flex justify-between items-center ">
+        <button onclick="toggleTheme()" class="bg-blue-500 text-white px-2 py-2 rounded flex items-center">
+          <img src="assets/sun_icon2.svg" alt="icon" class="flex w-4 h-4">
+        </button>
+        <div class="flex space-x-4">
+          <button onclick="shareLink()" class="bg-blue-500 text-white flex items-color p-1 rounded">
+            <img src="assets/paper_icon2.svg" alt="icon" class="w-5 h-5 mr-4">
+            Compartilhar
+          </button>
+          <button onclick="downloadPDF()" class="bg-green-500 text-white flex items-center p-1 rounded">
+            <img src="assets/download_icon2.svg" alt="icon" class="w-4 h-4 mr-4">
+            Baixar PDF 
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <img src="assets/profile.jpeg" alt="foto perfil" class="w-24 h-26 rounded-ful mx-auto mb-4">
+        <h1 id="name" class="text-4xl font-bold">|</h1>
+        <p class="text-lg">Engenheiro de Software | Designer Gráfico </p>
+        <p class="text-sm text-gray-600">Parauapebas, Pará, Brasil</p>
+      </div>
+
+      <div class="mt-6" >
+        <h2 class="text-2xl font-semibold mt-3 mb-1"> $ Objetivo Profissional </h2>
+        <p>Aplicar meus conhecimentos em desenvolvimento de software e design gráfico para criar soluções inovadoras e eficientes.</p>
+        <h2 class="text-2xl font-semibold mt-6 mb-1"> $ Projetos Atuais </h2>
+        <p>Atualmente estou envolvido em dois projetos com Phoenix e Elixir.</p>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-1"> $ Habilidades </h2>
+        <ul class="list-disc pl-6">
+          <li>React, NextJs, Vite, Tailwindcss, HTML/CSS</li>
+          <li>JavaScript (NodeJs), Java</li>
+          <li>Design Gráfico (Photoshop e Illustrator)</li>
+          <li>Git, NeoVim, Bash, MongoDb, PostgresSQL,</li>
+          <li>Aws, Google Claude, JWT</li>
+          <li>Algoritmos e Estruturas de Dados em Java, e em C++</li>
+          <li>Redes Neurais com Javascript, e em C++</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-1">$ Formação</h2>
+        <p>Cursando o 7º Período de Engenharia de Software - Estácio</p>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-1"> $ Experiências Profissional </h2>
+        <ul class="list-disc pl-6">
+          <li>JSL S/A - Encarregado de Operações (2021 - 2024)</li>
+          <li>Ulha Comunição - Diretor de Marketing (2020 - 2021) </li>
+          <li>Komatsu Brasil - Almoxarife II (2017 - 2020)</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-1"> $ Redes Sociais </h2>
+        <ul class="list-disc pl-6 flex gap-20">
+          <li><a href="https://www.instagram.com/imarlonrosa/" target="_blank">Instagram</a></li>
+          <li ><a href="https://www.linkedin.com/in/omarlonrosa" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/omarlonRosa" target="_blank">GitHub</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </body>
+</html>
